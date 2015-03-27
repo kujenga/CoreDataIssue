@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+@objc(File)
 class File: NSManagedObject {
 
     @NSManaged var name: String

@@ -15,9 +15,9 @@
 		86462FB91AC5E0D60048CC19 /* EntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86462FB81AC5E0D60048CC19 /* EntityTests.swift */; };
 		86462FC31AC5E0F20048CC19 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86462FC21AC5E0F20048CC19 /* Persistence.swift */; };
 		86462FC51AC5E1740048CC19 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86462FC41AC5E1740048CC19 /* File.swift */; };
-		86462FCA1AC5EC7E0048CC19 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86462FC21AC5E0F20048CC19 /* Persistence.swift */; };
-		86462FCB1AC5ECD10048CC19 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86462FC41AC5E1740048CC19 /* File.swift */; };
-		86462FCC1AC5ECD40048CC19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86462FA21AC5E0D60048CC19 /* AppDelegate.swift */; };
+		866968581AC611C100E7D978 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86462FC21AC5E0F20048CC19 /* Persistence.swift */; };
+		866968591AC611C800E7D978 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86462FA21AC5E0D60048CC19 /* AppDelegate.swift */; };
+		8669685A1AC61A9000E7D978 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86462FC41AC5E1740048CC19 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,10 +87,10 @@
 				86462FA21AC5E0D60048CC19 /* AppDelegate.swift */,
 				86462FA41AC5E0D60048CC19 /* ViewController.swift */,
 				86462FC21AC5E0F20048CC19 /* Persistence.swift */,
+				86462FC41AC5E1740048CC19 /* File.swift */,
 				86462FA91AC5E0D60048CC19 /* Images.xcassets */,
 				86462FAB1AC5E0D60048CC19 /* Main.storyboard */,
 				86462FA61AC5E0D60048CC19 /* Entity.xcdatamodeld */,
-				86462FC41AC5E1740048CC19 /* File.swift */,
 				86462FA01AC5E0D60048CC19 /* Supporting Files */,
 			);
 			path = Entity;
@@ -232,10 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86462FCC1AC5ECD40048CC19 /* AppDelegate.swift in Sources */,
+				866968591AC611C800E7D978 /* AppDelegate.swift in Sources */,
+				8669685A1AC61A9000E7D978 /* File.swift in Sources */,
+				866968581AC611C100E7D978 /* Persistence.swift in Sources */,
 				86462FB91AC5E0D60048CC19 /* EntityTests.swift in Sources */,
-				86462FCB1AC5ECD10048CC19 /* File.swift in Sources */,
-				86462FCA1AC5EC7E0048CC19 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +420,7 @@
 				86462FBE1AC5E0D60048CC19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86462FBF1AC5E0D60048CC19 /* Build configuration list for PBXNativeTarget "EntityTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +429,7 @@
 				86462FC11AC5E0D60048CC19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

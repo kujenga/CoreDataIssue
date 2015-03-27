@@ -22,6 +22,9 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction func createFile(sender: AnyObject) {
+        Persistence.createFile(nil, name: "app-file")
+    }
 
 }
 

@@ -33,9 +33,9 @@ struct Persistence {
         let moc = self.validateMOC(mocIn)
         
         let newEntity: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("File", inManagedObjectContext: moc)
-        let newFile = newEntity as? File
+        let newFile = newEntity as File
         
-        newFile!.name = name
+        newFile.name = name
         
         self.saveMOC(moc, funcName: __FUNCTION__)
     }
