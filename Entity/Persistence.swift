@@ -39,4 +39,23 @@ struct Persistence {
         
         self.saveMOC(moc, funcName: __FUNCTION__)
     }
+    
+    static func getAllFiles(mocIn: NSManagedObjectContext?) -> [File]? {
+        let moc = self.validateMOC(mocIn)
+        
+        var fetchRequest = NSFetchRequest(entityName: "File")
+        
+        var err = NSErrorPointer()
+        let results = moc.executeFetchRequest(fetchRequest, error: err)
+        if err != nil {
+            NSLog("%@ fetch request error: %@", __FUNCTION__, err.memory!)
+            return nil
+        }
+        if let r = results {
+            if r.count > 0 {
+                return r as? [File]
+            }
+        }
+        return nil
+    }
 }

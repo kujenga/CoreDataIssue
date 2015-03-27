@@ -673,7 +673,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aKc-Jq-hPb">
-                                <rect key="frame" x="187" y="118" width="107" height="32"/>
+                                <rect key="frame" x="187" y="222" width="107" height="32"/>
                                 <buttonCell key="cell" type="push" title="Create File" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="M7H-kT-vjW">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -682,12 +682,47 @@
                                     <action selector="createFile:" target="XfG-lQ-9wD" id="eNS-iI-W0H"/>
                                 </connections>
                             </button>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwq-5t-OCs">
+                                <rect key="frame" x="20" y="20" width="440" height="189"/>
+                                <clipView key="contentView" id="ekF-Vd-UOp">
+                                    <rect key="frame" x="1" y="1" width="223" height="133"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="vSk-lC-Bba">
+                                            <rect key="frame" x="0.0" y="0.0" width="223" height="133"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="438" height="187"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="438" height="187"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="3YZ-yz-Xvk">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="TBK-4j-vcN">
+                                    <rect key="frame" x="224" y="1" width="15" height="133"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="aKc-Jq-hPb" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="8j6-RV-hBg"/>
-                            <constraint firstItem="aKc-Jq-hPb" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="KKC-K9-GFw"/>
+                            <constraint firstItem="aKc-Jq-hPb" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="0oN-eC-2G8"/>
+                            <constraint firstItem="Pwq-5t-OCs" firstAttribute="top" secondItem="aKc-Jq-hPb" secondAttribute="bottom" constant="20" symbolic="YES" id="2jD-zw-BAa"/>
+                            <constraint firstItem="Pwq-5t-OCs" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="BH7-FN-HGR"/>
+                            <constraint firstAttribute="trailing" secondItem="Pwq-5t-OCs" secondAttribute="trailing" constant="20" symbolic="YES" id="Pa2-FR-Nf3"/>
+                            <constraint firstAttribute="bottom" secondItem="Pwq-5t-OCs" secondAttribute="bottom" constant="20" symbolic="YES" id="QCS-w0-Scm"/>
+                            <constraint firstItem="aKc-Jq-hPb" firstAttribute="centerX" secondItem="Pwq-5t-OCs" secondAttribute="centerX" id="UAb-5u-QLd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="vSk-lC-Bba" id="xQr-Ni-5ju"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
