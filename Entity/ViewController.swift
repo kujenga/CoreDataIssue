@@ -27,9 +27,11 @@ class ViewController: NSViewController {
     }
     
     func update() {
-        self.textView.string = ""
-        for f in Persistence.getAllFiles(nil)! {
-            self.textView.textStorage!.appendAttributedString(NSAttributedString(string: "\(f.name)\n"))
+        if let files = Persistence.getAllFiles(nil) {
+            self.textView.string = ""
+            for f in files {
+                self.textView.textStorage!.appendAttributedString(NSAttributedString(string: "\(f.name)\n"))
+            }
         }
     }
 

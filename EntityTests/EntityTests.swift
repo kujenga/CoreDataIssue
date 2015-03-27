@@ -66,4 +66,27 @@ class EntityTests: XCTestCase {
         Persistence.createFile(self.managedObjectContext, name: "test")
     }
     
+    // MARK: self-contained test
+    
+    func setUpInMemoryManagedObjectContext() -> NSManagedObjectContext {
+        let managedObjectModel = NSManagedObjectModel.mergedModelFromBundles([NSBundle.mainBundle()])!
+        
+        let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel)
+        persistentStoreCoordinator.addPersistentStoreWithType(NSInMemoryStoreType, configuration: nil, URL: nil, options: nil, error: nil)
+        
+        let managedObjectContext = NSManagedObjectContext()
+        managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
+        
+        return managedObjectContext
+    }
+    
+    func testSomethingUsingCoreData() {
+        let managedObjectContext = setUpInMemoryManagedObjectContext()
+        let entity: AnyObject = NSEntityDescription.insertNewObjectForEntityForName("File", inManagedObjectContext: managedObjectContext)
+        let file = entity as File
+        // model setup
+        
+        // XCTAssert
+        XCTAssertNotNil(file, "file should not be nil")
+    }
 }
